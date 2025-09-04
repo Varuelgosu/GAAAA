@@ -159,6 +159,7 @@ Bootstrap permite aplicar un tema claro u oscuro usando `data-bs-theme`.
   </body>
 </html>
 ```
+![imagen17](fotos/imagen17.png)
 
 **Ejemplo por secciones:**
 ```html
@@ -170,8 +171,9 @@ Bootstrap permite aplicar un tema claro u oscuro usando `data-bs-theme`.
   Sección en modo oscuro
 </div>
 ```
+![imagen18](fotos/imagen18.png)
 
-👉 Esto da flexibilidad: puedes tener un header oscuro y un body claro.
+👉 Con estos dos ejemplos puedes ver la diferencia entre aplicar el tema a toda la página o solo a secciones específicas.
 
 ---
 
@@ -192,7 +194,7 @@ Puedes definir un tema especial con `data-bs-theme` y variables personalizadas:
   <button class="btn btn-primary">Botón con tema Sunset</button>
 </div>
 ```
-
+![imagen19](fotos/imagen19.png)
 ---
 
 ### 6. Cambiar colores dinámicamente con JavaScript
@@ -210,5 +212,5 @@ También puedes manipular las variables con JS:
   // Ejemplo: cambiarPrimario('#4caf50'); -> lo vuelve verde
 </script>
 ```
-
+![imagen20](fotos/imagen20.png)
 👉 Esto es útil si quieres que el usuario pueda elegir el color principal desde un “selector de color”.
