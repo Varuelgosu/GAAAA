@@ -36,7 +36,7 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 <p class="text-danger">Texto de peligro</p>
 <p class="text-muted">Texto con menos énfasis</p>
 ```
-!(fotos/imagen11.png)
+![imagen11](fotos/imagen11.png)
 ---
 
 ### 3. Colores de fondo
