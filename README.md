@@ -57,4 +57,158 @@ Estas se combinan con clases de texto (`.text-*`) para asegurar que el contraste
 ```
 ![imagen12](fotos/imagen12.png)
 
-##### Noten que .text-bg-* ajusta automáticamente el color del texto para que siempre sea legible.
+##### Notamos que .text-bg-* ajusta automáticamente el color del texto para que siempre sea legible.
+
+---
+
+## 4. Bordes y sombras
+
+Bootstrap incluye utilidades para bordes y sombras que facilitan la personalización visual de tus elementos:
+
+```html
+<div class="border border-success p-3 mb-2 rounded">
+  Caja con borde verde y esquinas redondeadas
+</div>
+<div class="border border-danger p-3 mb-2 shadow-sm">
+  Caja con borde rojo y sombra pequeña
+</div>
+<div class="border border-primary p-3 shadow-lg">
+  Caja con borde azul y sombra grande
+</div>
+```
+![imagen13](fotos/imagen13.png)
+
+- ✅ `.border-*` aplica color al borde.
+- ✅ `.shadow-*` (`sm`, normal, `lg`) agrega distintos niveles de sombra.
+
+---
+
+## 5. Colores en componentes
+
+Bootstrap permite aplicar colores directamente a componentes como botones, alertas y badges:
+
+```html
+<button class="btn btn-primary">Botón primario</button>
+<button class="btn btn-outline-danger">Botón outline danger</button>
+
+<div class="alert alert-warning mt-3">Alerta de advertencia</div>
+<div class="alert alert-success">Alerta de éxito</div>
+
+<span class="badge text-bg-info">Etiqueta info</span>
+<span class="badge text-bg-dark">Etiqueta dark</span>
+```
+![imagen14](fotos/imagen14.png)
+
+👉 Esto permite construir interfaces rápidas con un estilo consistente.
+
+---
+
+## B) Estilos temáticos
+
+### 1. ¿Qué es un estilo temático?
+
+Bootstrap usa variables CSS personalizadas (`--bs-*`) para manejar los colores principales del framework.
+Estas variables controlan el color base de botones, fondos, textos y componentes.
+
+👉 Si cambio una sola variable, ¡todo el tema se actualiza!
+
+---
+
+### 2. Variables más comunes
+
+Algunas de las más usadas son:
+
+- `--bs-primary`: color principal
+- `--bs-secondary`: color secundario
+- `--bs-body-bg`: color de fondo del body
+- `--bs-body-color`: color de texto del body
+- `--bs-border-color`: color de los bordes
+
+---
+
+### 3. Personalizar variables en CSS
+
+Puedes sobrescribir las variables en tu archivo CSS o dentro de un `<style>`:
+
+```html
+<style>
+  :root {
+    --bs-primary: #e91e63;  /* rosa */
+    --bs-body-bg: #f9f9f9;  /* amarillo */
+    --bs-body-color: #212121; /* texto oscuro */
+  }
+</style>
+```
+![imagen15](fotos/imagen15.png)
+
+![imagen16](fotos/imagen16.png)
+
+👉 A partir de aquí, cualquier elemento con `btn-primary`, `text-primary` o `bg-primary` se pintará con el nuevo color.
+
+---
+
+### 4. Modo Light y Dark
+
+Bootstrap permite aplicar un tema claro u oscuro usando `data-bs-theme`.
+
+**Ejemplo global:**
+```html
+<html data-bs-theme="dark">
+  <body class="p-3">
+    <button class="btn btn-primary">Botón en dark mode</button>
+  </body>
+</html>
+```
+
+**Ejemplo por secciones:**
+```html
+<div data-bs-theme="light" class="p-3">
+  Sección en modo claro
+</div>
+
+<div data-bs-theme="dark" class="p-3 mt-2">
+  Sección en modo oscuro
+</div>
+```
+
+👉 Esto da flexibilidad: puedes tener un header oscuro y un body claro.
+
+---
+
+### 5. Crear un tema propio
+
+Puedes definir un tema especial con `data-bs-theme` y variables personalizadas:
+
+```html
+<style>
+  [data-bs-theme="sunset"] {
+    --bs-primary: #ff7043;  /* naranja atardecer */
+    --bs-body-bg: #fff3e0; /* fondo cálido */
+    --bs-body-color: #3e2723; /* texto marrón oscuro */
+  }
+</style>
+
+<div data-bs-theme="sunset" class="p-3">
+  <button class="btn btn-primary">Botón con tema Sunset</button>
+</div>
+```
+
+---
+
+### 6. Cambiar colores dinámicamente con JavaScript
+
+También puedes manipular las variables con JS:
+
+```html
+<script>
+  const root = document.documentElement;
+
+  function cambiarPrimario(color) {
+    root.style.setProperty('--bs-primary', color);
+  }
+
+  // Ejemplo: cambiarPrimario('#4caf50'); -> lo vuelve verde
+</script>
+```
+
+👉 Esto es útil si quieres que el usuario pueda elegir el color principal desde un “selector de color”.
