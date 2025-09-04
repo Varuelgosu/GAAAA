@@ -378,6 +378,11 @@ Un tooltip es un pequeño cuadro de texto que aparece cuando pasas el mouse sobr
   Pasa el mouse aquí
 </button>
 ```
+![imagen34](fotos/imagen34.png)
+
+![imagen35](fotos/imagen35.png)
+
+![imagen36](fotos/imagen36.png)
 
 ### 3. Inicialización con JavaScript
 
@@ -414,6 +419,11 @@ Un dropdown es un menú desplegable que aparece al hacer clic en un botón. Es �
   </ul>
 </div>
 ```
+![imagen37](fotos/imagen37.png)
+
+![imagen38](fotos/imagen38.png)
+
+![imagen39](fotos/imagen39.png)
 
 👉 No necesitas código adicional en JS, Bootstrap lo activa automáticamente gracias al `data-bs-toggle="dropdown"`.
 
@@ -459,5 +469,8 @@ Un carousel es un slider que muestra varias imágenes o contenido en pase autom�
   </button>
 </div>
 ```
+![imagen40](fotos/imagen40.png)
 
-👉 Este ejemplo crea un carrusel con indicadores, tres imágenes y controles de navegación.
+![imagen41](fotos/imagen41.png)
+
+👉 Este ejemplo crea un carrusel con indicadores, cuatro imágenes y controles de navegación.
