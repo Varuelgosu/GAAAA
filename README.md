@@ -246,6 +246,8 @@ Bootstrap define puntos de corte (*breakpoints*) que corresponden a los tamaños
 | Extra grande        | `xl`         | ≥1200px      |
 | Extra extra grande  | `xxl`        | ≥1400px      |
 
+![imagen21](fotos/imagen21.png)
+
 👉 Con estos breakpoints, Bootstrap cambia el diseño según el ancho de la pantalla.
 
 ---
@@ -270,6 +272,9 @@ Usamos los breakpoints para organizar el contenido:
 - En pantallas medianas (`col-md-6`): aparecen dos columnas por fila.
 - En pantallas grandes (`col-lg-4`): aparecen tres columnas en la misma fila.
 
+![imagen23](fotos/imagen23.png)
+![imagen24](fotos/imagen24.png)
+![imagen22](fotos/imagen22.png)
 ✅ Esto demuestra cómo el layout cambia automáticamente con media queries.
 
 ---
@@ -284,6 +289,9 @@ Bootstrap tiene muchas utilidades que funcionan con los prefijos de breakpoint.
 <p class="d-none d-md-block">Este texto solo aparece en pantallas medianas en adelante.</p>
 <p class="d-block d-md-none">Este texto solo aparece en pantallas pequeñas.</p>
 ```
+![imagen22](fotos/imagen25.png)
+
+![imagen22](fotos/imagen26.png)
 
 👉 Esto se usa mucho para mostrar distintos menús en móvil y escritorio.
 
@@ -294,6 +302,11 @@ Bootstrap tiene muchas utilidades que funcionan con los prefijos de breakpoint.
   Este texto está centrado en móviles pero alineado a la izquierda en pantallas medianas y grandes.
 </p>
 ```
+![imagen29](fotos/imagen29.png)
+
+![imagen30](fotos/imagen30.png)
+
+---
 
 ### 3. Espaciado (padding y margin)
 
@@ -302,6 +315,9 @@ Bootstrap tiene muchas utilidades que funcionan con los prefijos de breakpoint.
   Caja con poco padding en móvil, pero con mucho padding en pantallas medianas en adelante.
 </div>
 ```
+![imagen27](fotos/imagen27.png)
+
+![imagen28](fotos/imagen28.png)
 
 ---
 
@@ -328,3 +344,114 @@ A veces necesitamos escribir nuestras propias reglas en CSS para casos específi
 ```
 
 👉 Con esto, el fondo de la página cambia de color según el tamaño de pantalla.
+
+---
+
+# 10. Integración con JavaScript (Tooltips, Dropdowns, Carousels)
+
+En esta última parte se explica cómo **Bootstrap integra JavaScript** en algunos de sus componentes más comunes: **Tooltips, Dropdowns y Carousels**.
+
+Estos componentes necesitan **Bootstrap JS** para funcionar. Recuerda incluir este script al final del `<body>`:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+---
+
+## A) Tooltips
+
+### 1. ¿Qué es un tooltip?
+
+Un tooltip es un pequeño cuadro de texto que aparece cuando pasas el mouse sobre un elemento. Sirve para mostrar información adicional de forma discreta.
+
+### 2. Ejemplo básico
+
+```html
+<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Este es un tooltip">
+  Pasa el mouse aquí
+</button>
+```
+
+### 3. Inicialización con JavaScript
+
+Bootstrap requiere activar los tooltips con JavaScript:
+
+```html
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+```
+
+✅ Ahora, cada vez que pases el cursor sobre el botón, verás el tooltip.
+
+---
+
+## B) Dropdowns
+
+### 1. ¿Qué es un dropdown?
+
+Un dropdown es un menú desplegable que aparece al hacer clic en un botón. Es útil para mostrar opciones adicionales sin ocupar mucho espacio.
+
+### 2. Ejemplo básico
+
+```html
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+    Menú desplegable
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Opción 1</a></li>
+    <li><a class="dropdown-item" href="#">Opción 2</a></li>
+    <li><a class="dropdown-item" href="#">Opción 3</a></li>
+  </ul>
+</div>
+```
+
+👉 No necesitas código adicional en JS, Bootstrap lo activa automáticamente gracias al `data-bs-toggle="dropdown"`.
+
+---
+
+## C) Carousels
+
+### 1. ¿Qué es un carousel?
+
+Un carousel es un slider que muestra varias imágenes o contenido en pase automático o con controles de navegación.
+
+### 2. Ejemplo básico
+
+```html
+<div id="demoCarousel" class="carousel slide" data-bs-ride="carousel">
+  
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demoCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Imágenes -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/800/300?random=1" class="d-block w-100" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/800/300?random=2" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/800/300?random=3" class="d-block w-100" alt="Imagen 3">
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+```
+
+👉 Este ejemplo crea un carrusel con indicadores, tres imágenes y controles de navegación.
