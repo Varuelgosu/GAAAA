@@ -289,9 +289,9 @@ Bootstrap tiene muchas utilidades que funcionan con los prefijos de breakpoint.
 <p class="d-none d-md-block">Este texto solo aparece en pantallas medianas en adelante.</p>
 <p class="d-block d-md-none">Este texto solo aparece en pantallas pequeñas.</p>
 ```
-![imagen22](fotos/imagen25.png)
+![imagen26](fotos/imagen26.png)
 
-![imagen22](fotos/imagen26.png)
+![imagen25](fotos/imagen25.png)
 
 👉 Esto se usa mucho para mostrar distintos menús en móvil y escritorio.
 
