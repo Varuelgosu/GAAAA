@@ -214,3 +214,117 @@ También puedes manipular las variables con JS:
 ```
 ![imagen20](fotos/imagen20.png)
 👉 Esto es útil si quieres que el usuario pueda elegir el color principal desde un “selector de color”.
+
+---
+
+# 9. Diseño responsivo avanzado con media queries
+
+En esta sección se explica cómo funciona el diseño responsivo en **Bootstrap** y cómo aprovechar las **media queries** para adaptar el sitio a diferentes tamaños de pantalla.
+
+La idea es entender primero los **breakpoints de Bootstrap**, luego ver ejemplos de uso con utilidades, y finalmente aprender cómo crear **media queries personalizadas** para casos avanzados.
+
+---
+
+## A) Introducción al diseño responsivo
+
+El **diseño responsivo** significa que una página web se ve bien en **móviles, tablets y computadoras**, ajustándose automáticamente.
+
+Bootstrap tiene un sistema de **grid** y clases utilitarias basadas en **media queries** que facilitan este trabajo.
+
+---
+
+## B) Breakpoints en Bootstrap
+
+Bootstrap define puntos de corte (*breakpoints*) que corresponden a los tamaños más comunes de pantallas:
+
+| Tamaño              | Prefijo      | Valor mínimo |
+|---------------------|--------------|--------------|
+| Extra pequeño       | (sin prefijo)| <576px       |
+| Pequeño             | `sm`         | ≥576px       |
+| Mediano             | `md`         | ≥768px       |
+| Grande              | `lg`         | ≥992px       |
+| Extra grande        | `xl`         | ≥1200px      |
+| Extra extra grande  | `xxl`        | ≥1400px      |
+
+👉 Con estos breakpoints, Bootstrap cambia el diseño según el ancho de la pantalla.
+
+---
+
+## C) Ejemplo básico de grid responsivo
+
+Usamos los breakpoints para organizar el contenido:
+
+```html
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 bg-primary text-white p-3">Columna 1</div>
+    <div class="col-12 col-md-6 col-lg-4 bg-success text-white p-3">Columna 2</div>
+    <div class="col-12 col-md-12 col-lg-4 bg-warning text-dark p-3">Columna 3</div>
+  </div>
+</div>
+```
+
+**Explicación:**
+
+- En pantallas pequeñas (`col-12`): cada columna ocupa todo el ancho (una debajo de otra).
+- En pantallas medianas (`col-md-6`): aparecen dos columnas por fila.
+- En pantallas grandes (`col-lg-4`): aparecen tres columnas en la misma fila.
+
+✅ Esto demuestra cómo el layout cambia automáticamente con media queries.
+
+---
+
+## D) Clases utilitarias responsivas
+
+Bootstrap tiene muchas utilidades que funcionan con los prefijos de breakpoint.
+
+### 1. Mostrar/ocultar elementos
+
+```html
+<p class="d-none d-md-block">Este texto solo aparece en pantallas medianas en adelante.</p>
+<p class="d-block d-md-none">Este texto solo aparece en pantallas pequeñas.</p>
+```
+
+👉 Esto se usa mucho para mostrar distintos menús en móvil y escritorio.
+
+### 2. Alineación de texto
+
+```html
+<p class="text-center text-md-start">
+  Este texto está centrado en móviles pero alineado a la izquierda en pantallas medianas y grandes.
+</p>
+```
+
+### 3. Espaciado (padding y margin)
+
+```html
+<div class="p-2 p-md-5 bg-light border">
+  Caja con poco padding en móvil, pero con mucho padding en pantallas medianas en adelante.
+</div>
+```
+
+---
+
+## E) Media queries personalizadas
+
+A veces necesitamos escribir nuestras propias reglas en CSS para casos específicos:
+
+```html
+<style>
+  /* Para pantallas menores a 768px */
+  @media (max-width: 767px) {
+    body {
+      background-color: #f8bbd0; /* rosado */
+    }
+  }
+
+  /* Para pantallas grandes (≥992px) */
+  @media (min-width: 992px) {
+    body {
+      background-color: #bbdefb; /* celeste */
+    }
+  }
+</style>
+```
+
+👉 Con esto, el fondo de la página cambia de color según el tamaño de pantalla.
