@@ -12,7 +12,7 @@ En esta parte vamos a ver dos cosas muy importantes de Bootstrap:
 ## A) Colores
 
 ### 1. ¿Qué son los colores en Bootstrap?
-Bootstrap trae una paleta de colores lista para usar en clases. Los principales son:
+Bootstrap trae una paleta de colores lista para usar en clases. Los principales:
 
 - `primary` (azul por defecto)
 - `secondary` (gris)
@@ -35,8 +35,11 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 <p class="text-success">Texto de éxito</p>
 <p class="text-danger">Texto de peligro</p>
 <p class="text-muted">Texto con menos énfasis</p>
+```
 
-## 3. Colores de fondo
+---
+
+### 3. Colores de fondo
 
 Bootstrap también permite cambiar el color de los fondos de forma muy rápida con las clases `.bg-*`.  
 Estas se combinan con clases de texto (`.text-*`) para asegurar que el contraste sea correcto.
@@ -44,6 +47,7 @@ Estas se combinan con clases de texto (`.text-*`) para asegurar que el contraste
 ### Ejemplo:
 
 ```html
-<div class="bg-primary text-white p-2 rounded">Caja con fondo azul</div>
-<div class="bg-warning text-dark p-2 rounded">Caja con fondo amarillo</div>
-<div class="text-bg-success p-2 rounded">Caja con fondo verde (contraste automático)</div>
+<div class="bg-primary text-white p-2 rounded">Fondo azul con texto blanco</div>
+<div class="bg-warning text-dark p-2 rounded">Fondo amarillo con texto oscuro</div>
+<div class="text-bg-success p-2 rounded">Fondo verde con contraste automático</div>
+```
