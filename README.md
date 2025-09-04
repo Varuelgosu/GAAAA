@@ -1,4 +1,4 @@
-# 8. Modificadores de color y estilos temáticos :tw-1f44d:
+# 8. Modificadores de color y estilos temáticos
 
 En esta parte vamos a ver dos cosas muy importantes de Bootstrap:
 
@@ -37,6 +37,8 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 <p class="text-muted">Texto con menos énfasis</p>
 ```
 ![imagen11](fotos/imagen11.png)
+Aquí cada línea toma el color automáticamente según la clase usada.
+.text-muted es especial, porque sirve para darle menos importancia visual al texto.
 ---
 
 ### 3. Colores de fondo
