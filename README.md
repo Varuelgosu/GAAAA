@@ -345,6 +345,12 @@ A veces necesitamos escribir nuestras propias reglas en CSS para casos específi
 
 👉 Con esto, el fondo de la página cambia de color según el tamaño de pantalla.
 
+![imagen31](fotos/imagen31.png)
+
+![imagen32](fotos/imagen32.png)
+
+![imagen33](fotos/imagen33.png)
+
 ---
 
 # 10. Integración con JavaScript (Tooltips, Dropdowns, Carousels)
