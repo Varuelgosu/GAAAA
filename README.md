@@ -357,7 +357,7 @@ A veces necesitamos escribir nuestras propias reglas en CSS para casos específi
 
 En esta última parte se explica cómo **Bootstrap integra JavaScript** en algunos de sus componentes más comunes: **Tooltips, Dropdowns y Carousels**.
 
-Estos componentes necesitan **Bootstrap JS** para funcionar. Recuerda incluir este script al final del `<body>`:
+Estos componentes necesitan **Bootstrap JS** para funcionar. Recordemos incluir este script al final del `<body>`:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -457,6 +457,9 @@ Un carousel es un slider que muestra varias imágenes o contenido en pase autom�
     </div>
     <div class="carousel-item">
       <img src="https://picsum.photos/800/300?random=3" class="d-block w-100" alt="Imagen 3">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/800/300?random=4" class="d-block w-100" alt="Imagen 4">
     </div>
   </div>
 
