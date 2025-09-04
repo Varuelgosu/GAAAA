@@ -38,8 +38,8 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 ```
 ![imagen11](fotos/imagen11.png)
 
-##### Aquí cada línea toma el color automáticamente según la clase usada.
-##### .text-muted es especial, porque sirve para darle menos importancia visual al texto.
+##### :tw-1f449: Aquí cada línea toma el color automáticamente según la clase usada.
+##### :tw-1f449: .text-muted es especial, porque sirve para darle menos importancia visual al texto.
 
 ---
 
