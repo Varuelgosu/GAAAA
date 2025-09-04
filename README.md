@@ -38,8 +38,8 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 ```
 ![imagen11](fotos/imagen11.png)
 
-##### :tw-1f449: Aquí cada línea toma el color automáticamente según la clase usada.
-##### :tw-1f449: .text-muted es especial, porque sirve para darle menos importancia visual al texto.
+##### Aquí cada línea toma el color automáticamente según la clase usada.
+##### .text-muted es especial, porque sirve para darle menos importancia visual al texto.
 
 ---
 
@@ -55,3 +55,6 @@ Estas se combinan con clases de texto (`.text-*`) para asegurar que el contraste
 <div class="bg-warning text-dark p-2 rounded">Fondo amarillo con texto oscuro</div>
 <div class="text-bg-success p-2 rounded">Fondo verde con contraste automático</div>
 ```
+![imagen12](fotos/imagen12.png)
+
+##### Noten que .text-bg-* ajusta automáticamente el color del texto para que siempre sea legible.
