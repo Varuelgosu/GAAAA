@@ -1,16 +1,11 @@
-# 8. Modificadores de color y estilos temáticos
+# 8. Modificadores de color y estilos temáticos :tw-1f44d:
 
-**Objetivo:** Explicar de forma clara y básica cómo funcionan los colores y los estilos temáticos en Bootstrap, mostrar ejemplos prácticos y aplicarlos en Visual Studio Code para entenderlos desde cero.
-
----
-
-## Introducción
 En esta parte vamos a ver dos cosas muy importantes de Bootstrap:
 
 1. **Colores:** cómo aplicar fácilmente colores a texto, fondos, bordes y componentes usando las utilidades que ya vienen con Bootstrap.  
-2. **Estilos temáticos:** cómo funcionan los modos light/dark y cómo puedo cambiar los colores base de todo mi proyecto usando variables de Bootstrap.
+2. **Estilos temáticos:** cómo funcionan los modos light/dark y cómo se puede cambiar los colores base de todo el proyecto usando variables de Bootstrap.
 
-Mi idea es que primero entendamos lo básico con ejemplos sencillos, y luego probemos un ejemplo completo que podemos ejecutar en nuestro Visual Studio Code.
+[![imagen10](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fyctov28ajeuwfmkpgq19.png "imagen10")](http://https://dev.to/ijash/customizing-bootstrap-5-color-theme-in-create-react-app-48d7 "imagen10")
 
 ---
 
