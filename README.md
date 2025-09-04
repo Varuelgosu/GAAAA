@@ -37,8 +37,9 @@ Para cambiar el color del texto uso `.text-*`. Ejemplo:
 <p class="text-muted">Texto con menos énfasis</p>
 ```
 ![imagen11](fotos/imagen11.png)
-Aquí cada línea toma el color automáticamente según la clase usada.
-.text-muted es especial, porque sirve para darle menos importancia visual al texto.
+
+### Aquí cada línea toma el color automáticamente según la clase usada.
+### .text-muted es especial, porque sirve para darle menos importancia visual al texto.
 ---
 
 ### 3. Colores de fondo
